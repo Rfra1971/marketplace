@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalles del Producto</title>
+    <!-- Añade Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .product-image {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Detalles del Producto</h1>
+        <!-- Aquí es donde mostrarías los detalles de un producto artesanal específico -->
+        <p>ID del producto: {{ product_id }}</p>
+        {% if product_id == 1 %}
+            <img src="ruta_de_la_imagen_1" alt="Producto 1" class="product-image">
+            <p>Nombre: Producto Artesanal 1</p>
+            <p>Descripción: Este es un producto artesanal hecho con amor y cuidado.</p>
+        {% elif product_id == 2 %}
+            <img src="ruta_de_la_imagen_2" alt="Producto 2" class="product-image">
+            <p>Nombre: Producto Artesanal 2</p>
+            <p>Descripción: Este es otro producto artesanal de alta calidad.</p>
+        {% elif product_id == 3 %}
+            <img src="ruta_de_la_imagen_3" alt="Producto 3" class="product-image">
+            <p>Nombre: Producto Artesanal 3</p>
+            <p>Descripción: Este producto artesanal es el mejor de todos.</p>
+        {% endif %}
+    </div>
+    <!-- Añade Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Marketplace de Productos Artesanales</title>
+    <!-- Añade Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+        .card img {
+            border-radius: 5px 5px 0 0;
+        }
+        .card a {
+            color: #007BFF;
+        }
+        .card a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Bienvenido al Marketplace de Productos Artesanales</h1>
+        <!-- Aquí es donde mostrarías los productos artesanales disponibles -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="ruta_de_la_imagen" class="card-img-top" alt="Producto 1">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="/product/1">Producto 1</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="ruta_de_la_imagen" class="card-img-top" alt="Producto 2">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="/product/2">Producto 2</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="ruta_de_la_imagen" class="card-img-top" alt="Producto 3">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="/product/3">Producto 3</a></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Añade Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
