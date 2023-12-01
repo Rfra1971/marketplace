@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalles del Producto</title>
+</head>
+<body>
+    <h1>Detalles del Producto</h1>
+    <!-- Aquí es donde mostrarías los detalles de un producto artesanal específico -->
+    <p>ID del producto: {{ product_id }}</p>
+    {% if product_id == 1 %}
+        <p>Nombre: Producto Artesanal 1</p>
+        <p>Descripción: Este es un producto artesanal hecho con amor y cuidado.</p>
+    {% elif product_id == 2 %}
+        <p>Nombre: Producto Artesanal 2</p>
+        <p>Descripción: Este es otro producto artesanal de alta calidad.</p>
+    {% elif product_id == 3 %}
+        <p>Nombre: Producto Artesanal 3</p>
+        <p>Descripción: Este producto artesanal es el mejor de todos.</p>
+    {% endif %}
+</body>
+</html>
