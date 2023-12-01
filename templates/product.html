@@ -20,10 +20,29 @@
         p {
             font-size: 18px;
             line-height: 1.6;
+            margin-bottom: 1em;
         }
         .product-image {
             width: 100%;
-            height: auto;
+            height: 200px;  /* Ajusta esto al tamaño que prefieras */
+            object-fit: contain;  /* Esto hará que la imagen se ajuste dentro de su contenedor sin cortarse */
+            margin-bottom: 1em;  /* Añade espacio debajo de la imagen */
+        }
+        .btn-buy {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-buy:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
@@ -33,21 +52,23 @@
         <!-- Aquí es donde mostrarías los detalles de un producto artesanal específico -->
         <p>ID del producto: {{ product_id }}</p>
         {% if product_id == 1 %}
-            <img src="ruta_de_la_imagen_1" alt="Producto 1" class="product-image">
-            <p>Nombre: Producto Artesanal 1</p>
-            <p>Descripción: Este es un producto artesanal hecho con amor y cuidado.</p>
+            <img src="{{ url_for('static', filename='producto1.jpg') }}" alt="Producto 1" class="product-image">
+            <p><strong>Nombre:</strong> Tequileros de Madera</p>
+            <p><strong>Descripción:</strong> Vasitos tequileros de madera creado con madera de guayacán de la mejor calidad.</p>
+            <a href="#" class="btn-buy">Comprar</a>
         {% elif product_id == 2 %}
-            <img src="ruta_de_la_imagen_2" alt="Producto 2" class="product-image">
-            <p>Nombre: Producto Artesanal 2</p>
-            <p>Descripción: Este es otro producto artesanal de alta calidad.</p>
+            <img src="{{ url_for('static', filename='producto2.jpg') }}" alt="Producto 2" class="product-image">
+            <p><strong>Nombre:</strong> Triciclo de madera</p>
+            <p><strong>Descripción:</strong> Producto artesanal de alta calidad de un triciclo de madera de roble diseñado para la jardinería.</p>
+            <a href="#" class="btn-buy">Comprar</a>
         {% elif product_id == 3 %}
-            <img src="ruta_de_la_imagen_3" alt="Producto 3" class="product-image">
-            <p>Nombre: Producto Artesanal 3</p>
-            <p>Descripción: Este producto artesanal es el mejor de todos.</p>
+            <img src="{{ url_for('static', filename='producto3.jpg') }}" alt="Producto 3" class="product-image">
+            <p><strong>Nombre:</strong> Producto Artesanal 3</p>
+            <p><strong>Descripción:</strong> cucharas de madera con diseño en el mango floral.</p>
+            <a href="#" class="btn-buy">Comprar</a>
         {% endif %}
     </div>
     <!-- Añade Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
-
